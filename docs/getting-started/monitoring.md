@@ -26,6 +26,17 @@ squeue --me
 
 Use the `JOBID` of your job for any commands that should be applied to it.
 
+## More Detailed View
+
+The output can of squeue can be customised to include more details and adjust the column length, which are otherwise
+truncated, see [Slurm Workload Manager - squeue](https://slurm.schedmd.com/squeue.html#OPT_format) for available fields.
+
+The following command shows a more detailed view of the default output:
+
+```sh
+squeue -O "JobID:10,Name:50,UserName:25,TimeUsed:12,TimeLeft:12,NumCPUs:8,tres-per-node:30,Partition:10,ReasonList:20,State:8"
+```
+
 ## Cancel Jobs with `scancel`
 
 If you decide that you want to cancel any of your jobs, you can use `scancel <JOBID>` with the job ID that you
