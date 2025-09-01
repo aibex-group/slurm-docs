@@ -17,7 +17,28 @@ export default defineConfig({
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    sidebar: [{ text: "Introduction", link: "/" }],
+    sidebar: [
+      { text: "Introduction", link: "/" },
+      {
+        text: "Getting Started",
+        link: "/getting-started/",
+        items: [
+          { text: "Connecting to the Cluster", link: "/getting-started/connecting" },
+          { text: "Setting up SSH Keys", link: "/getting-started/ssh-keys" },
+          { text: "Setting up your Environment", link: "/getting-started/environment" },
+          {
+            text: "Running Jobs",
+            link: "/getting-started/running-jobs",
+            items: [
+              { text: "Interactive Jobs with srun", link: "/getting-started/running-jobs/srun" },
+              { text: "Background Jobs with sbatch", link: "/getting-started/running-jobs/sbatch" },
+            ],
+          },
+          { text: "Monitoring Jobs", link: "/getting-started/monitoring" },
+          { text: "Testing GPU Support with PyTorch", link: "/getting-started/test-gpu" },
+        ],
+      },
+    ],
     socialLinks: [{ icon: "gitlab", link: "https://diuf-gitlab.unifr.ch/slurm/docs" }],
     editLink: {
       pattern: "https://diuf-gitlab.unifr.ch/slurm/docs/-/edit/main/docs/:path",
