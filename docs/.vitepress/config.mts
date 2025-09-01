@@ -38,6 +38,14 @@ export default defineConfig({
           { text: "Testing GPU Support with PyTorch", link: "/getting-started/test-gpu" },
         ],
       },
+      {
+        text: "Hardware",
+        link: "/hardware/",
+        items: [
+          { text: "Available Nodes", link: "/hardware/nodes" },
+          { text: "Choosing Resources", link: "/hardware/choosing-resources" },
+        ],
+      },
     ],
     socialLinks: [{ icon: "gitlab", link: "https://diuf-gitlab.unifr.ch/slurm/docs" }],
     editLink: {
