@@ -13,7 +13,7 @@ export default defineConfig({
   cleanUrls: true,
   sitemap: {
     // Generate sitemap.xml for the pages to be indexed correctly.
-    hostname: "https://slurm.pages.diuf-gitlab.unifr.ch/docs/",
+    hostname: "https://diuf-gitlab.unifr.ch:8091/slurm/docs/",
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
