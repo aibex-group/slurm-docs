@@ -8,7 +8,7 @@ export default defineConfig({
     "Unofficial Documentation for the high performance computing (HPC) cluster of DIUF at the UniFR using Slurm.",
   outDir: "../public",
   // As it uses GitLab pages, the URL starts with the repository name.
-  base: "/docs/",
+  base: "/slurm/docs/",
   // Creates links without the `.html` suffix, i.e. "/page" instead of "/page.html".
   cleanUrls: true,
   sitemap: {
