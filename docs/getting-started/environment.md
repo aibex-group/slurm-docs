@@ -80,6 +80,11 @@ rm Miniforge3-$$(uname)-$$(uname -m).sh
 
 ## HuggingFace Cache
 
+> [!WARNING]
+>
+> There is currently no scratch partition or designated shared directories, therefore this section does not work and you
+> **_MUST NOT_** set these variables.
+
 HuggingFace is widely used to download models and datasets. As a lot of people will use the same models, it would be
 unnecessary for each of them to download, particularly since the LLMs are quite large and use a lot of disk space. For
 this reason, a shared cache is used across all users, which is located in `/scratch/cache/huggingface/`.
