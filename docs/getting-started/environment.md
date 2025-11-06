@@ -82,14 +82,16 @@ rm Miniforge3-$$(uname)-$$(uname -m).sh
 
 HuggingFace is widely used to download models and datasets. As a lot of people will use the same models, it would be
 unnecessary for each of them to download, particularly since the LLMs are quite large and use a lot of disk space. For
-this reason, a shared cache is used across all users, which is located in `/HOME/shared/huggingface/`. You need to make sure that any HuggingFace tool (e.g.
-transformers) uses the shared cache rather than he default `~/.cache/huggingface/`.
+this reason, a shared cache is used across all users, which is located in `/scratch/cache/huggingface/`.
+You need to make sure that any HuggingFace tool (e.g. transformers) uses the shared cache rather than he default
+`~/.cache/huggingface/`.
 
-You need to set the following environment variables:
+For this you need to set the following environment variables:
 
 ```sh
-export HF_HUB_CACHE=/HOME/shared/cache/huggingface/hub
-export HF_ASSETS_CACHE=/HOME/shared/cache/huggingface/assets
+export HF_HUB_CACHE=/scratch/cache/huggingface/hub
+export HF_XET_CACHE=/scratch/cache/huggingface/hub
+export HF_ASSETS_CACHE=/scratch/cache/huggingface/assets
 ```
 
 > [!TIP]
@@ -97,8 +99,9 @@ export HF_ASSETS_CACHE=/HOME/shared/cache/huggingface/assets
 > it to your `~/.bashrc`:
 >
 > ```sh
-> echo "export HF_HUB_CACHE=/HOME/shared/huggingface/hub" >> ~/.bashrc
-> echo "export HF_ASSETS_CACHE=/HOME/shared/huggingface/assets" >> ~/.bashrc
+> echo "export HF_HUB_CACHE=/scratch/cache/huggingface/hub" >> ~/.bashrc
+> echo "export HF_XET_CACHE=/scratch/cache/huggingface/xet" >> ~/.bashrc
+> echo "export HF_ASSETS_CACHE=/scratch/cache/huggingface/assets" >> ~/.bashrc
 > ```
 
 [conda-forge]: https://conda-forge.org/
