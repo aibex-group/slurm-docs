@@ -78,3 +78,11 @@ CPUS    CPUS(A/I/O/T)   ALLOCMEM  MEMORY    GRES                          GRES_U
 ```
 
 Here you can see that the last node (diufrd204) with the `v100_32gb:8` GPUs, has allocated 14 CPUs out of the 64 and uses 4 out of 8 GPUs (the column `GRES_USED` shows `gpu:v100_32gb:4`).
+
+> [!INFO]
+> The letters In `CPUS(A/I/O/T)` stand for:
+>
+> - **A (Allocated)**: How many CPUs are already allocated.
+> - **I (Idle)**: How many CPUs are still available.
+> - **O (Other)**: Any unforeseen state, usually they are down (e.g. if all are in _Other_, the node is down).
+> - **T (Total)**: Total number of CPUs.
