@@ -19,9 +19,9 @@ Accessible with `--partition=CPU` (default).
 
 Accessible with `--partition=GPU`.
 
- | Node ID   | CPU                        | #CPU | RAM   | GPU                                          | #GPU | VRAM |
- | --------- | -------------------------- | ---: | ----: | -------------------------------------------- | ---: | ---: |
- | diufrd202 | AMD Epyc 7742              | 256  | 512GB | NVIDIA GeForce RTX 3080 Ti                   | 6    | 12GB |
- | diufrd203 | AMD Epyc 9554              | 128  | 1.5TB | NVIDIA L40S                                  | 4    | 48GB |
- | diufrd204 | Intel(R) Xeon(R) Gold 6142 | 64   | 768GB | NVIDIA Tesla V100 SXM2 32GB                  | 8    | 32GB |
- | diufrd205 | AMD EPYC 9654              | 96   | 2.3TB | NVIDIA RTX PRO 6000 Blackwell Server Edition | 8    | 96GB |
+| Node ID   | CPU                        | #CPU |   RAM | GPU                                          | #GPU | VRAM |
+| --------- | -------------------------- | ---: | ----: | -------------------------------------------- | ---: | ---: |
+| diufrd202 | AMD Epyc 7742              |  256 | 512GB | NVIDIA GeForce RTX 3080 Ti                   |    6 | 12GB |
+| diufrd203 | AMD Epyc 9554              |  128 | 1.5TB | NVIDIA L40S                                  |    4 | 48GB |
+| diufrd204 | Intel(R) Xeon(R) Gold 6142 |   64 | 768GB | NVIDIA Tesla V100 SXM2 32GB                  |    8 | 32GB |
+| diufrd205 | AMD EPYC 9654              |   96 | 2.3TB | NVIDIA RTX PRO 6000 Blackwell Server Edition |    8 | 96GB |
