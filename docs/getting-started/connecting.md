@@ -1,7 +1,8 @@
 > [!IMPORTANT]
-> You need a DIUF Linux account that has requested access to the _Faith Cluster_.
+> You need to request access to the _Faith Cluster_ to get an account for it.
 >
-> An account can be created on the page [DIUF - New Diuf Account / Change Password](https://diuf-file.unifr.ch/intranet/?Linux___New_Diuf_Account_%2F_Change_Password).
+> Details are given on the official documentation
+> [Faith HPC Cluster - Subscription & Account Creation](https://moodle.unifr.ch/course/section.php?id=458779).
 
 # Connecting to the Cluster
 

@@ -2,9 +2,9 @@
 > This is an _unofficial_ documentation with a focus on Machine Learning for the Aibex group.
 >
 > The cluster as well as the documentation are still in the _beta_ stage. Expect potential errors and inconsistencies
-> with the [official documentation](https://diuf-doc.unifr.ch/books/faith-hpc-cluster).
+> with the [official documentation](https://moodle.unifr.ch/course/section.php?id=458779).
 >
-> For any questions about the cluster please contact [diuf-sysadmin@unifr.ch](mailto:diuf-sysadmin@unifr.ch).
+> For any questions about the cluster please contact [diuf-support@unifr.ch](mailto:diuf-support@unifr.ch).
 
 _Unofficial_ Documentation for the high performance computing (HPC) cluster of DIUF at the UniFR using Slurm.
 
