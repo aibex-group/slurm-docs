@@ -46,6 +46,11 @@ export default defineConfig({
           { text: "Choosing Resources", link: "/hardware/choosing-resources" },
         ],
       },
+      {
+        text: "Guides",
+        link: "/guides/",
+        items: [{ text: "vLLM Server with OpenAI Client", link: "/guides/vllm-server-openai-client" }],
+      },
     ],
     socialLinks: [{ icon: "gitlab", link: "https://diuf-gitlab.unifr.ch/slurm/docs" }],
     editLink: {
