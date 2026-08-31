@@ -9,18 +9,8 @@ which means you need to specficy `--partition=GPU` to request them.
 For example using one L40S with 48GB of VRAM it would be:
 
 ```
-srun --partition=GPU --gres=gpu:l40s_48gb:1 <command>
+srun --partition=GPU --gres=gpu:l40s:1 <command>
 ```
-
-> [!WARNING]
-> Currently, all GPUs are marked with the same identifier (just `gpu`), which means it is not possible to specify the
-> kind of GPU you would like, but instead you have to specify the nodes directly that you may want to use.
->
-> This should hopefully change in the future, but in the meantime it would look like this:
->
-> ```
-> srun --partition=GPU --gres=gpu:1 --nodelist=diufrd203 <command>
-> ```
 
 > [!IMPORTANT]
 > For any Machine Learning experiment, **always** specify the exact GPU to use, as you should maximise the GPU usage,
@@ -92,7 +82,7 @@ Since there is no GPU on the login node, it shows that CUDA is not available.
 6. Submit a job with `srun` to execute `main.py` on the GPU node.
 
 ```
-$ srun --partition=GPU --gres=gpu:l40s_48gb:1 --pty uv run main.py
+$ srun --partition=GPU --gres=gpu:l40s:1 --pty uv run main.py
 PyTorch version: 2.8.0+cu128
 CUDA available: True
 CUDA version: 12.8
@@ -123,7 +113,7 @@ Since there is no GPU on the login node, it shows that CUDA is not available.
 
 ```
 $
-$ srun --partition=GPU --gres=gpu:l40s_48gb:1 --pty uv run test-gpu.py
+$ srun --partition=GPU --gres=gpu:l40s:1 --pty uv run test-gpu.py
 PyTorch version: 2.8.0+cu128
 CUDA available: True
 CUDA version: 12.8
@@ -172,7 +162,7 @@ Since there is no GPU on the login node, it shows that CUDA is not available.
 6. Submit a job with `srun` to execute `main.py` on the GPU node.
 
 ```
-$ srun --partition=GPU --gres=gpu:l40s_48gb:1 --pty python main.py
+$ srun --partition=GPU --gres=gpu:l40s:1 --pty python main.py
 
 PyTorch version: 2.8.0+cu128
 CUDA available: True
@@ -222,7 +212,7 @@ Since there is no GPU on the login node, it shows that CUDA is not available.
 6. Submit a job with `srun` to execute `main.py` on the GPU node.
 
 ```
-$ srun --partition=GPU --gres=gpu:l40s_48gb:1 --pty python main.py
+$ srun --partition=GPU --gres=gpu:l40s:1 --pty python main.py
 PyTorch version: 2.8.0+cu128
 CUDA available: True
 CUDA version: 12.8
