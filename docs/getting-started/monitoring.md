@@ -34,7 +34,7 @@ truncated, see [Slurm Workload Manager - squeue](https://slurm.schedmd.com/squeu
 The following command shows a more detailed view of the default output:
 
 ```sh
-squeue -O "JobID:10,Name:50,UserName:25,TimeUsed:12,TimeLeft:12,NumCPUs:8,tres-per-node:30,Partition:10,ReasonList:20,State:8"
+squeue -O "JobID:10,Name:60,UserName:12,QOS:12,TimeUsed:12,TimeLeft:14,NumCPUs:8,tres-per-node:30,Partition:10,ReasonList:20,State:8"
 ```
 
 ## Cancel Jobs with `scancel`
