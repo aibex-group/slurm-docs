@@ -71,6 +71,7 @@ export default defineConfig({
       dark: "catppuccin-mocha",
     },
     config(md) {
+      // @ts-ignore: Not sure why that is an error.
       md.use(tabsMarkdownPlugin);
     },
   },

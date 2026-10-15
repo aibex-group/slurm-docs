@@ -22,5 +22,5 @@
     "noPropertyAccessFromIndexSignature": false
   },
   "include": ["docs/.vitepress/**/*"],
-  "exclude": ["**/node_modules/**", "**/dist/**", "template", "bin"]
+  "exclude": ["**/node_modules/**", "**/dist/**", "template", "bin", "docs/.vitepress/cache/**"]
 }
