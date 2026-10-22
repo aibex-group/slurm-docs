@@ -44,6 +44,7 @@ export default defineConfig({
         items: [
           { text: "Available Nodes", link: "/hardware/nodes" },
           { text: "Choosing Resources", link: "/hardware/choosing-resources" },
+          { text: "Recommended Configs", link: "/hardware/recommended-configs" },
         ],
       },
       {
@@ -73,6 +74,8 @@ export default defineConfig({
     config(md) {
       // @ts-ignore: Not sure why that is an error.
       md.use(tabsMarkdownPlugin);
+      // Converts certain characters, such as `---` to emdash
+      md.set({ typographer: true });
     },
   },
 });
