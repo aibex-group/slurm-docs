@@ -25,3 +25,5 @@ Accessible with `--partition=GPU`.
 | diufrd203 | AMD Epyc 9554              |  128 | 1.5TB | NVIDIA L40S                                  |    4 | 48GB |
 | diufrd204 | Intel(R) Xeon(R) Gold 6142 |   64 | 768GB | NVIDIA Tesla V100 SXM2 32GB                  |    8 | 32GB |
 | diufrd205 | AMD EPYC 9654              |  384 | 2.3TB | NVIDIA RTX PRO 6000 Blackwell Server Edition |    8 | 96GB |
+| diufrd206 | AMD EPYC 9654              |  384 | 2.3TB | NVIDIA RTX PRO 6000 Blackwell Server Edition |    2 | 96GB |
+| diufrd207 | AMD EPYC 9654              |  384 | 2.3TB | NVIDIA RTX PRO 6000 Blackwell Server Edition |    8 | 96GB |
