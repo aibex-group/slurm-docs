@@ -5,13 +5,12 @@
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs",
-    "format": "prettier --check --write .",
+    "format": "bun fmt",
     "check:types": "bun check",
-    "check:format": "prettier --check ."
+    "check:format": "bun fmt --check"
   },
   "devDependencies": {
     "@types/bun": "^1.4.3",
-    "prettier": "^3.9.10",
     "vitepress": "^1.6.4",
     "vitepress-plugin-tabs": "^0.9.1"
   },
