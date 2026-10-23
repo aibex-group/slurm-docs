@@ -4,7 +4,7 @@
 > The cluster as well as the documentation are still in the _beta_ stage. Expect potential errors and inconsistencies
 > with the [official documentation](https://moodle.unifr.ch/course/section.php?id=458779).
 >
-> For any questions about the cluster please contact [diuf-support@unifr.ch](mailto:diuf-support@unifr.ch).
+> For any questions about the cluster please contact [diuf-cluster@unifr.ch](mailto:diuf-cluster@unifr.ch).
 
 _Unofficial_ Documentation for the high performance computing (HPC) cluster of DIUF at the UniFR using Slurm.
 
