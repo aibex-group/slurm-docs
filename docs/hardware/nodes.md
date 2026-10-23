@@ -5,7 +5,8 @@ accidentally used by a job that does not require a GPU.
 
 Since there are many big nodes, which contain multiple GPUs, it is expected that you request individual GPUs in most
 cases. Keep the other resources, such as CPUs and RAM, proportional to the ratio of GPUs used. This is explained in more
-detail in [Choosing Resources - Managing Multi-GPU Nodes](./choosing-resources.md#managing-multi-gpu-nodes).
+detail in [Choosing Resources - Managing Multi-GPU Nodes](./choosing-resources.md#managing-multi-gpu-nodes) and the
+recommended options for each GPU, are provided on the [Recommended Configs](./recommended-configs.md) page.
 
 ## CPU Partition
 

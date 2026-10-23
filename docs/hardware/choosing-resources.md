@@ -51,6 +51,9 @@ srun --partition=GPU --gres=gpu:l40s:1 --mem-per-gpu 375000 --cpus-per-gpu 32 <c
 `--cpus-per-task` defines how many CPUs you want for the job you run, whereas `--cpus-per-gpu` would specify how many
 CPUs you need per GPU. If you run a single job with a single GPU, both of them are equivalent.
 
+> [!TIP]
+> The recommended options for each GPU, are provided on the [Recommended Configs](./recommended-configs.md) page.
+
 ## Identifying Available Resources
 
 In cases where you are not required to use a specific GPU and want to use any free node, such that the job can be run
