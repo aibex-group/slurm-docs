@@ -37,6 +37,18 @@ The following command shows a more detailed view of the default output:
 squeue -O "JobID:10,Name:60,UserName:12,QOS:12,TimeUsed:12,TimeLeft:14,NumCPUs:8,tres-per-node:30,Partition:10,ReasonList:20,State:8"
 ```
 
+Excerpt from the output (made for a decently wide terminal, ~200 characters):
+
+```
+JOBID     NAME                                                        USER        QOS         TIME        TIME_LEFT     CPUS    TRES_PER_NODE                 PARTITION NODELIST(REASON)    STATE
+27639     ijdar-qwen-full                                             peerm       priority    14:56:31    9:03:29       4       gres/gpu:rtx6000:1            GPU       diufrd205           RUNNING
+27668     vela-document-classification                                jungom      scavenger   0:15        59:45         48      gres/gpu:rtx6000:1            GPU       diufrd206           RUNNING
+27665     legal-translation-evaluate-qwen-3.5-9b-every100-judge-basic jungom      priority    3:10:43     UNLIMITED     48      gres/gpu:rtx6000:1            GPU       diufrd205           RUNNING
+
+```
+
+If the output is too large, you can reduce the size of certain columns or remove them entirely.
+
 ## Cancel Jobs with `scancel`
 
 If you decide that you want to cancel any of your jobs, you can use `scancel <JOBID>` with the job ID that you
