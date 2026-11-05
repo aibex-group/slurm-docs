@@ -13,7 +13,7 @@ export default defineConfig({
   cleanUrls: true,
   sitemap: {
     // Generate sitemap.xml for the pages to be indexed correctly.
-    hostname: "https://aibex-group.github.io/slurm-docs/",
+    hostname: "https://aibex.ch/slurm-docs/",
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
