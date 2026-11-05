@@ -13,6 +13,10 @@ node and be familiar how to operate over SSH.
 
 ## SSH Connection
 
+> [!INFO]
+> The cluster is only accessible from within the UniFr network. If you want to connect from outside the University you
+> need to use a VPN.
+
 The SSH connection must be established to the address `diufrd200.unifr.ch` where you authenticate with your Linux
 username.
 
