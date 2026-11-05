@@ -53,7 +53,7 @@ export default defineConfig({
         items: [{ text: "vLLM Server with OpenAI Client", link: "/guides/vllm-server-openai-client" }],
       },
     ],
-    socialLinks: [{ icon: "github", link: "https://aibex-group.github.io/slurm-docs" }],
+    socialLinks: [{ icon: "github", link: "https://github.com/aibex-group/slurm-docs" }],
     editLink: {
       pattern: "https://github.com/aibex-group/slurm-docs/edit/main/docs/:path",
       text: "Edit this page on GitHub",
