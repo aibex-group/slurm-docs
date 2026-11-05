@@ -121,6 +121,10 @@
   --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
 }
 
+:root {
+  scrollbar-gutter: stable;
+}
+
 /**
  * Component: Algolia
  * -------------------------------------------------------------------------- */
