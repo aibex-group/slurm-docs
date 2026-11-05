@@ -1,5 +1,5 @@
 > [!INFO]
-> This is an _unofficial_ documentation with a focus on Machine Learning for the Aibex group.
+> This is an _unofficial_ documentation with a focus on Machine Learning for the AIBEX group.
 >
 > The cluster as well as the documentation are still in the _beta_ stage. Expect potential errors and inconsistencies
 > with the [official documentation](https://moodle.unifr.ch/course/section.php?id=458779).
