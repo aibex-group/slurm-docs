@@ -7,13 +7,13 @@ export default defineConfig({
   description:
     "Unofficial Documentation for the high performance computing (HPC) cluster of DIUF at the UniFR using Slurm.",
   outDir: "../public",
-  // As it uses GitLab pages, the URL starts with the repository name.
-  base: "/slurm/docs/",
+  // As it uses GitHub pages, the URL starts with the repository name.
+  base: "/slurm-docs/",
   // Creates links without the `.html` suffix, i.e. "/page" instead of "/page.html".
   cleanUrls: true,
   sitemap: {
     // Generate sitemap.xml for the pages to be indexed correctly.
-    hostname: "https://diuf-gitlab.unifr.ch:8091/slurm/docs/",
+    hostname: "https://aibex-group.github.io/slurm-docs/",
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -53,10 +53,10 @@ export default defineConfig({
         items: [{ text: "vLLM Server with OpenAI Client", link: "/guides/vllm-server-openai-client" }],
       },
     ],
-    socialLinks: [{ icon: "gitlab", link: "https://diuf-gitlab.unifr.ch/slurm/docs" }],
+    socialLinks: [{ icon: "github", link: "https://aibex-group.github.io/slurm-docs" }],
     editLink: {
-      pattern: "https://diuf-gitlab.unifr.ch/slurm/docs/-/edit/main/docs/:path",
-      text: "Edit this page on GitLab",
+      pattern: "https://github.com/aibex-group/slurm-docs/edit/main/docs/:path",
+      text: "Edit this page on GitHub",
     },
     search: {
       provider: "local",
