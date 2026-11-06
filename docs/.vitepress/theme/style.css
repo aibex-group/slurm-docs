@@ -167,9 +167,10 @@ kbd {
   padding: 0 !important;
 }
 
-/* Open height: expands naturally to fit full content */
+/* Open state: LOCK the padding to 16px so it exactly matches the negative margins */
 .vp-doc details.custom-block[open] {
   height: auto;
+  padding: 16px !important; /* Overrides the 12px 16px from alert callouts */
 }
 
 /* Summary: Full-width clickable header */
@@ -187,7 +188,7 @@ kbd {
   user-select: none;
 }
 
-/* When open: offset open container padding so summary stays flush */
+/* When open: exactly offsets the 16px container padding on top and sides */
 .vp-doc details.custom-block[open] summary {
   margin: -16px -16px 12px -16px !important;
 }
@@ -585,4 +586,158 @@ kbd {
 .VPSidebarItem.level-5 .items {
   padding-left: 0px !important;
   margin-left: 12px;
+}
+
+/* ==================================================
+ * GitHub-Style Markdown Alerts / Callouts
+ * ================================================== */
+/* 1. Global Callout Container Structure */
+.vp-doc .custom-block {
+  margin: 16px 0;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  border-left-width: 3.5px;
+  box-shadow: none;
+}
+
+/* 2. Title & Icon Layout */
+.vp-doc .custom-block .custom-block-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 4px;
+}
+
+/* Ensure the built-in icon takes the title accent color */
+.vp-doc .custom-block .custom-block-title::before {
+  margin-right: 0;
+  font-size: 16px;
+}
+
+/* 3. Body Text (always readable standard text, not tinted) */
+.vp-doc .custom-block p {
+  font-size: 13.5px;
+  line-height: 22px;
+  color: var(--vp-c-text-1);
+  margin: 0;
+}
+
+.vp-doc .custom-block p + p {
+  margin-top: 8px;
+}
+
+/* 4. GitHub Inline Code inside Callouts */
+.vp-doc .custom-block code {
+  background-color: var(--vp-c-default-soft);
+  color: var(--vp-c-text-1);
+}
+
+/* ==================================================
+ * GitHub Alert Styles & External Octicons
+ * ================================================== */
+
+/* 1. Base icon layout: ONLY apply to handled alert types */
+.vp-doc .custom-block.tip .custom-block-title::before,
+.vp-doc .custom-block.info .custom-block-title::before,
+.vp-doc .custom-block.note .custom-block-title::before,
+.vp-doc .custom-block.important .custom-block-title::before,
+.vp-doc .custom-block.warning .custom-block-title::before,
+.vp-doc .custom-block.danger .custom-block-title::before {
+  content: "" !important;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  background-color: currentColor;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  vertical-align: -2px;
+}
+
+/* 2. Fallback: suppress ::before on any unhandled blocks (prevents black square) */
+.vp-doc
+  .custom-block:not(.tip):not(.info):not(.note):not(.important):not(.warning):not(.danger)
+  .custom-block-title::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* ==================================================
+ * Color & Mask Rules
+ * ================================================== */
+
+/* TIP (Green - Lightbulb) */
+.vp-doc .custom-block.tip {
+  background-color: var(--vp-c-green-soft);
+  border-left-color: var(--vp-c-green-1);
+}
+.vp-doc .custom-block.tip .custom-block-title {
+  color: var(--vp-c-green-1);
+}
+.vp-doc .custom-block.tip .custom-block-title::before {
+  -webkit-mask-image: url("./icons/light-bulb-16.svg");
+  mask-image: url("./icons/light-bulb-16.svg");
+}
+
+/* INFO & NOTE (Blue/Brand - Info Octicon) */
+.vp-doc .custom-block.info,
+.vp-doc .custom-block.note {
+  background-color: var(--vp-c-brand-soft);
+  border-left-color: var(--vp-c-brand-1);
+}
+.vp-doc .custom-block.info .custom-block-title,
+.vp-doc .custom-block.note .custom-block-title {
+  color: var(--vp-c-brand-1);
+}
+.vp-doc .custom-block.info .custom-block-title::before,
+.vp-doc .custom-block.note .custom-block-title::before {
+  -webkit-mask-image: url("./icons/info-16.svg");
+  mask-image: url("./icons/info-16.svg");
+}
+
+/* IMPORTANT (Purple - Flame/Report Octicon) */
+.vp-doc .custom-block.important {
+  background-color: var(--vp-c-purple-soft);
+  border-left-color: var(--vp-c-purple-1);
+}
+.vp-doc .custom-block.important .custom-block-title {
+  color: var(--vp-c-purple-1);
+}
+.vp-doc .custom-block.important .custom-block-title::before {
+  -webkit-mask-image: url("./icons/report-16.svg");
+  mask-image: url("./icons/report-16.svg");
+}
+
+/* WARNING (Yellow / Amber - Alert Octicon) */
+.vp-doc .custom-block.warning {
+  background-color: var(--vp-c-yellow-soft);
+  border-left-color: var(--vp-c-yellow-1);
+}
+.vp-doc .custom-block.warning .custom-block-title {
+  color: var(--vp-c-yellow-1);
+}
+.vp-doc .custom-block.warning .custom-block-title::before {
+  -webkit-mask-image: url("./icons/alert-16.svg");
+  mask-image: url("./icons/alert-16.svg");
+}
+
+/* DANGER / CAUTION (Red - Stop Octicon) */
+.vp-doc .custom-block.danger {
+  background-color: var(--vp-c-red-soft);
+  border-left-color: var(--vp-c-red-1);
+}
+.vp-doc .custom-block.danger .custom-block-title {
+  color: var(--vp-c-red-1);
+}
+.vp-doc .custom-block.danger .custom-block-title::before {
+  -webkit-mask-image: url("./icons/stop-16.svg");
+  mask-image: url("./icons/stop-16.svg");
 }
