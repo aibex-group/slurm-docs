@@ -79,4 +79,4 @@ This still prompts you for your password to authenticate. If you want to avoid t
 
 > [!TIP]
 > Setting `ForwardAgent yes` allows you to use your local SSH keys on the remote server when connected rather than
-> having to create a separate one to use for services such as GitLab.
+> having to create a separate one to use for services such as GitHub.
