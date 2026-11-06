@@ -741,3 +741,195 @@ kbd {
   -webkit-mask-image: url("./icons/stop-16.svg");
   mask-image: url("./icons/stop-16.svg");
 }
+
+/* ==================================================
+ * Code Blocks
+ * ================================================== */
+.vp-doc div[class*="language-"] > pre {
+  margin: 0 !important;
+  padding: 10px 14px;
+  overflow-x: auto;
+  overflow-y: hidden !important; /* Prevents phantom vertical scrollbars */
+}
+
+/* Typography & line spacing */
+.vp-doc div[class*="language-"] code {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Code blocks without line numbers */
+.vp-doc div[class*="language-"]:not(.line-numbers-mode) > pre {
+  padding-left: 0px;
+}
+.vp-doc div[class*="language-"]:not(.line-numbers-mode) code {
+  padding: 0 14px;
+}
+
+/* Line numbers gutter: align tight to the text */
+.vp-doc div[class*="language-"].line-numbers-mode {
+  padding: 0px 12px;
+}
+
+.vp-doc div[class*="language-"].line-numbers-mode .line-numbers-wrapper {
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 10px 0px;
+  opacity: 0.8;
+}
+
+/* ==================================================
+ * Copy Button & Tooltip
+ * ================================================== */
+/* Button Container */
+.vp-doc div[class*="language-"] button.copy,
+.vp-doc div[class*="language-"] button.copy:focus {
+  top: 4px;
+  right: 6px;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 6px !important;
+  background-size: 18px !important;
+  background-position: center;
+  position: absolute;
+  overflow: visible !important;
+  cursor: pointer;
+
+  /* Frosted Glass Core */
+  background-color: rgba(22, 24, 30, 0.75) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+
+  transition:
+    background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.15s ease;
+}
+
+/* Button Hover State */
+.vp-doc div[class*="language-"] button.copy:hover {
+  background-color: rgba(30, 33, 42, 0.85) !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Button Active/Click Micro-Feedback */
+.vp-doc div[class*="language-"] button.copy:active {
+  transform: scale(0.96);
+}
+
+/* Light mode adaptation for button */
+:root:not(.dark) .vp-doc div[class*="language-"] button.copy,
+:root:not(.dark) .vp-doc div[class*="language-"] button.copy:focus {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+}
+
+:root:not(.dark) .vp-doc div[class*="language-"] button.copy:hover {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(0, 0, 0, 0.14) !important;
+}
+
+/* Suppress VitePress default popup spans if present */
+.vp-doc div[class*="language-"] button.copy > span,
+.vp-doc div[class*="language-"] button.copy.copied > span {
+  display: none !important;
+}
+
+/* Completely remove arrow pseudo-element */
+.vp-doc div[class*="language-"] button.copy::after,
+.vp-doc div[class*="language-"] button.copy.copied::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Tooltip Bubble */
+.vp-doc div[class*="language-"] button.copy::before,
+.vp-doc div[class*="language-"] button.copy.copied::before {
+  content: "Copy code" !important;
+  display: block !important;
+  position: absolute !important;
+  top: 50% !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: calc(100% + 4px) !important;
+  transform: translateY(-50%) !important;
+  margin: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 5px 10px !important;
+  border-radius: 6px !important;
+
+  /* Matches button frosted glass surface */
+  background: rgba(22, 24, 30, 0.75) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+
+  color: var(--vp-c-text-1) !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.2px;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  pointer-events: none !important;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.2s ease,
+    color 0.2s ease;
+  z-index: 10;
+}
+
+/* Light mode adaptation for tooltip */
+:root:not(.dark) .vp-doc div[class*="language-"] button.copy::before,
+:root:not(.dark) .vp-doc div[class*="language-"] button.copy.copied::before {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Hover reveal (micro-slide inwards) */
+.vp-doc div[class*="language-"] button.copy:hover::before {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(-50%) translateX(-2px) !important;
+}
+
+/* Copied tooltip state */
+/* Copied tooltip state with checkmark */
+.vp-doc div[class*="language-"] button.copy.copied::before {
+  content: "\2713  Copied!" !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(-50%) translateX(-2px) !important;
+  color: var(--vp-c-green-1) !important;
+  border-color: var(--vp-c-green-1) !important;
+  background: rgba(22, 24, 30, 0.82) !important;
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.3),
+    0 0 10px var(--vp-c-green-soft),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+}
+
+:root:not(.dark) .vp-doc div[class*="language-"] button.copy.copied::before {
+  background: rgba(255, 255, 255, 0.9) !important;
+}
