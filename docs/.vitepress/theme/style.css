@@ -483,3 +483,106 @@ kbd {
 #local-search-modal input.search-input::-webkit-search-cancel-button {
   cursor: pointer;
 }
+
+/* ==================================================
+ * VitePress-Carbon Sidebar (Compact + Built-in Indicator)
+ * ================================================== */
+/* Flat compact scrollbar */
+.VPSidebar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--vp-c-divider) transparent;
+}
+
+.VPSidebar .group:last-child {
+  border-bottom: none;
+}
+
+/* Tight Row (28px compact height) */
+.VPSidebar .VPSidebarItem .item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 0;
+  margin: 0;
+  padding: 3px 12px;
+  min-height: 28px;
+  border: none;
+  box-shadow: none;
+  transform: none;
+  background-color: transparent;
+  overflow: visible;
+  transition:
+    background-color 70ms cubic-bezier(0, 0, 0.38, 0.9),
+    color 70ms cubic-bezier(0, 0, 0.38, 0.9);
+}
+
+/* Typography */
+.VPSidebar .VPSidebarItem .text {
+  font-size: 12.5px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.16px;
+  color: var(--vp-c-text-2);
+}
+
+/* Caret / collapse button alignment */
+.VPSidebar .VPSidebarItem .caret {
+  width: 28px;
+  height: 28px;
+}
+
+/* Active Selected state */
+.VPSidebar .VPSidebarItem.is-active > .item {
+  background-color: var(--vp-c-bg-alt);
+}
+
+.VPSidebar .VPSidebarItem.is-active > .item .text {
+  color: var(--vp-c-text-1);
+  font-weight: 600;
+}
+
+/* Built-in Indicator: keep in layout, animate opacity & vertical scale */
+.VPSidebar .VPSidebarItem .indicator {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  border-radius: 0;
+  background-color: var(--vp-c-brand-1);
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.VPSidebar .VPSidebarItem.is-active > .item > .indicator {
+  opacity: 1;
+}
+
+/* Compact hierarchical indentation */
+.VPSidebar .VPSidebarItem.level-1 > .item {
+  padding-left: 12px;
+}
+
+.VPSidebar .VPSidebarItem.level-2 > .item {
+  padding-left: 20px;
+}
+
+.VPSidebar .VPSidebarItem.level-3 > .item {
+  padding-left: 28px;
+}
+
+.VPSidebar .VPSidebarItem.level-4 > .item {
+  padding-left: 36px;
+}
+
+.VPSidebarItem.level-1 .items,
+.VPSidebarItem.level-2 .items,
+.VPSidebarItem.level-3 .items,
+.VPSidebarItem.level-4 .items,
+.VPSidebarItem.level-5 .items {
+  padding-left: 0px !important;
+  margin-left: 12px;
+}
