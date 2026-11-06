@@ -12,6 +12,7 @@
   "devDependencies": {
     "@types/bun": "^1.4.3",
     "vitepress": "^1.6.4",
+    "vitepress-plugin-llms": "^1.14.0",
     "vitepress-plugin-tabs": "^0.9.1"
   },
   "peerDependencies": {

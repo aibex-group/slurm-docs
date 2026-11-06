@@ -1,5 +1,6 @@
 import { defineConfig } from "vitepress";
 import { tabsMarkdownPlugin } from "vitepress-plugin-tabs";
+import llmstxt from "vitepress-plugin-llms";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -77,5 +78,11 @@ export default defineConfig({
       // Converts certain characters, such as `---` to emdash
       md.set({ typographer: true });
     },
+  },
+  vite: {
+    plugins: [
+      // Generates llms.txt and llms-full.txt for LLM agents to consume.
+      llmstxt(),
+    ],
   },
 });
